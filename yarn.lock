@@ -634,6 +634,13 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-syntax-typescript@^7.2.0":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-typescript/-/plugin-syntax-typescript-7.3.3.tgz#a7cc3f66119a9f7ebe2de5383cce193473d65991"
+  integrity sha512-dGwbSMA1YhVS8+31CnPR7LB4pcbrzcV99wQzby4uAfrkZPYZlQ7ImwdpzLqi6Z6IL02b8IAL379CaMwo0x5Lag==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
 "@babel/plugin-transform-arrow-functions@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-arrow-functions/-/plugin-transform-arrow-functions-7.2.0.tgz#9aeafbe4d6ffc6563bf8f8372091628f00779550"
@@ -935,6 +942,15 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
+"@babel/plugin-transform-typescript@^7.7.2":
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-typescript/-/plugin-transform-typescript-7.7.2.tgz#eb9f14c516b5d36f4d6f3a9d7badae6d0fc313d4"
+  integrity sha512-UWhDaJRqdPUtdK1s0sKYdoRuqK0NepjZto2UZltvuCgMoMZmdjhgz5hcRokie/3aYEaSz3xvusyoayVaq4PjRg==
+  dependencies:
+    "@babel/helper-create-class-features-plugin" "^7.7.0"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-typescript" "^7.2.0"
+
 "@babel/plugin-transform-unicode-regex@^7.7.0":
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-unicode-regex/-/plugin-transform-unicode-regex-7.7.0.tgz#743d9bcc44080e3cc7d49259a066efa30f9187a3"
@@ -1018,6 +1034,14 @@
     "@babel/plugin-transform-react-jsx" "^7.7.0"
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
+
+"@babel/preset-typescript@^7.7.2":
+  version "7.7.2"
+  resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.7.2.tgz#f71c8bba2ae02f11b29dbf7d6a35f47bbe011632"
+  integrity sha512-1B4HthAelaLGfNRyrWqJtBEjXX1ulThCrLQ5B2VOtEAznWFIFXFJahgXImqppy66lx/Oh+cOSCQdJzZqh2Jh5g==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-transform-typescript" "^7.7.2"
 
 "@babel/register@^7.7.0":
   version "7.7.0"
@@ -1342,6 +1366,11 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
+"@types/eslint-visitor-keys@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
+  integrity sha512-OCutwjDZ4aFS6PB1UZ988C4YgwlBHJd6wCeQqaLdmadZ/7e+w79+hbMUFC1QXDNCmdyoRfAFdm0RypzwR+Qpag==
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -1418,7 +1447,18 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/experimental-utils@^2.5.0":
+"@typescript-eslint/eslint-plugin@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.7.0.tgz#dff176bdb73dfd7e2e43062452189bd1b9db6021"
+  integrity sha512-H5G7yi0b0FgmqaEUpzyBlVh0d9lq4cWG2ap0RKa6BkF3rpBb6IrAoubt1NWh9R2kRs/f0k6XwRDiDz3X/FqXhQ==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "2.7.0"
+    eslint-utils "^1.4.2"
+    functional-red-black-tree "^1.0.1"
+    regexpp "^2.0.1"
+    tsutils "^3.17.1"
+
+"@typescript-eslint/experimental-utils@2.7.0", "@typescript-eslint/experimental-utils@^2.5.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.7.0.tgz#58d790a3884df3041b5a5e08f9e5e6b7c41864b5"
   integrity sha512-9/L/OJh2a5G2ltgBWJpHRfGnt61AgDeH6rsdg59BH0naQseSwR7abwHq3D5/op0KYD/zFT4LS5gGvWcMmegTEg==
@@ -1426,6 +1466,16 @@
     "@types/json-schema" "^7.0.3"
     "@typescript-eslint/typescript-estree" "2.7.0"
     eslint-scope "^5.0.0"
+
+"@typescript-eslint/parser@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-2.7.0.tgz#b5e6a4944e2b68dba1e7fbfd5242e09ff552fd12"
+  integrity sha512-ctC0g0ZvYclxMh/xI+tyqP0EC2fAo6KicN9Wm2EIao+8OppLfxji7KAGJosQHSGBj3TcqUrA96AjgXuKa5ob2g==
+  dependencies:
+    "@types/eslint-visitor-keys" "^1.0.0"
+    "@typescript-eslint/experimental-utils" "2.7.0"
+    "@typescript-eslint/typescript-estree" "2.7.0"
+    eslint-visitor-keys "^1.1.0"
 
 "@typescript-eslint/typescript-estree@2.7.0":
   version "2.7.0"
@@ -4285,7 +4335,7 @@ eslint-scope@^5.0.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-utils@^1.4.3:
+eslint-utils@^1.4.2, eslint-utils@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-1.4.3.tgz#74fec7c54d0776b6f67e0251040b5806564e981f"
   integrity sha512-fbBN5W2xdY45KulGXmLHZ3c3FHfVYmKg0IrAKGOkT/464PQsx2UeIzfz1RmEci+KLm1bBaAzZAh8+/E+XAeZ8Q==
@@ -10000,6 +10050,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
 
 uglify-js@3.4.x:
   version "3.4.10"
