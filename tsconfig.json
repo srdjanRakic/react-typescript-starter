@@ -43,20 +43,8 @@
     "importHelpers": true
   },
   "paths": {
-    "actions/*": ["./actions/*"],
-    "assets/*": ["./assets/*"],
-    "constants/*": ["./constants/*"],
-    "containers/*": ["./containers/*"],
-    "components/*": ["./containers/*"],
-    "renderers/*": ["./renderers/*"],
-    "i18n/*": ["./i18n/*"],
-    "hooks/*": ["./hooks/*"],
-    "middleware/*": ["./middleware/*"],
-    "reducers/*": ["./reducers/*"],
-    "store/*": ["./store/*"],
-    "utils/*": ["./utils/*"],
-    "selectors/*": ["./selectors/*"]
+    // add paths here
   },
-  "include": ["src/**/*", "index.d.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build"]
 }
