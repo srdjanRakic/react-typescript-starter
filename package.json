@@ -24,7 +24,7 @@
   "main": "build/main.min.js",
   "browser": "build/main.min.js",
   "scripts": {
-   "preinstall": "node tools/nodeVersionCheck.js",
+    "preinstall": "node tools/nodeVersionCheck.js",
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "yarn start-message",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
