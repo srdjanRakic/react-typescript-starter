@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const commonPaths = require('./paths');
-const { name: libraryName } = require('./package.json');
+const { name: libraryName } = require('../package.json');
 
 module.exports = {
   entry: commonPaths.entryPath,
@@ -26,24 +26,10 @@ module.exports = {
         },
       },
       {
-        test: /\.(js)x?$/,
+        test: /\.(js|ts)x?$/,
         include: commonPaths.root,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.(ts)x?$/,
-        include: commonPaths.root,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              experimentalWatchApi: true,
-            },
-          },
-        ],
       },
       {
         test: /\.(jpe?g|png|gif|ico|svg)$/i,
@@ -79,20 +65,6 @@ module.exports = {
       'lodash.debounce': 'lodash/debounce',
       'lodash.assign': 'lodash/assign',
       'lodash.curry': 'lodash/curry',
-      'styled-components': commonPaths.styledPath,
-      actions: commonPaths.actions,
-      assets: commonPaths.assets,
-      constants: commonPaths.constants,
-      containers: commonPaths.containers,
-      components: commonPaths.components,
-      renderers: commonPaths.renderers,
-      hooks: commonPaths.hooks,
-      middleware: commonPaths.middleware,
-      reducers: commonPaths.reducers,
-      store: commonPaths.store,
-      utils: commonPaths.utils,
-      i18n: commonPaths.i18n,
-      selectors: commonPaths.selectors,
     },
   },
   stats: 'errors-warnings',
